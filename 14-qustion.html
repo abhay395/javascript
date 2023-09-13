@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-qustion</title>
+    <style>
+        .Gaming ,.Music,.Tech{
+            background-color:#000000;
+            color: white;
+            padding: 5px 10px 5px 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .is-tagled{
+            background-color: rgb(199, 196, 196);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="Gaming" onclick="buttonElemente('Gaming')" >Gaming</button>
+    <button class="Music" onclick="buttonElemente('Music')" >Music</button>
+    <button class="Tech" onclick="buttonElemente('Tech')" >Tech</button>
+    <script>
+        
+        function buttonElemente(thing) {
+            let gameElemainte=document.querySelector(`.${thing}`);
+            if(gameElemainte.classList.contains('is-tagled')===false){
+            gameElemainte.classList.add('is-tagled');
+        }else{
+        gameElemainte.classList.remove('is-tagled')
+    }
+}
+    </script>
+</body>
+</html>

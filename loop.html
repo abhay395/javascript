@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <p class="js-p" ></p>
+    <p class="js-p1" ></p>
+    <p class="js-p2" ></p>
+    <script>
+        const cars=['BMW','Volvo','MarutiSuzuki','ferari']
+        const person={
+            name:'john',
+            age:450
+        }
+        let text='';
+        for ( let i=0;i<cars.length; i++){
+            text +=cars[i]+'<br>';
+        }
+
+        document.querySelector('.js-p').innerHTML=text
+
+        let text1='';
+        for (let x in cars){
+        }
+        text1+=cars[x]+'<br>';
+        document.querySelector('.js-p1').innerHTML=text1
+// Do not use for in over an Array if the index order is important.
+// The index order is implementation-dependent, and array values may not be accessed in the order you expect.
+// It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
+
+        let text2=''
+        for (let i in person){
+            text2+=person[i]+' ';
+        }
+        document.querySelector('.js-p2').innerHTML=text2
+        </script>
+    </body>
+</html>

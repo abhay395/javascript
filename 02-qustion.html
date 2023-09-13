@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <style>
+        button{
+            height: 25px;
+            width: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p><button
+    onclick=" ubdateCalculation('1');
+    ">1</button>
+    <button onclick="ubdateCalculation('2');
+    "
+    >2</button></p>
+    <p><button onclick="ubdateCalculation('3');
+    "
+    >3</button>
+    <button onclick="ubdateCalculation('4');
+    "
+    >4</button></p>
+    <p><button onclick="ubdateCalculation('5');
+    "
+    >5</button>
+    <button onclick="ubdateCalculation('6');
+    "
+    >6</button></p>
+    <p><button
+    onclick=" ubdateCalculation('+');">+</button>
+    <button onclick="ubdateCalculation('=');">=</button>
+    <button onclick="ubdateCalculation('Reset');"style="width: 50px;">Reset</button></p>
+</body>
+<script>
+    let calculation='';
+    function ubdateCalculation(NS) {
+        if(NS==='='){
+            calculation=eval(calculation);
+            console.log(calculation);
+        }else if (NS==='Reset'){
+            calculation='';
+        }else{
+            calculation+=NS;
+            console.log(calculation);
+        }
+
+     
+    }
+
+</script>
+</html>

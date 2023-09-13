@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .js-input::after{
+        border: 5px solid rgb(210, 109, 109);
+       }
+    </style>
+</head>
+<body>
+    <input class="js-input" placeholder="Type Somthing" onkeyup="
+        inputelement();
+        ">
+    <p class="js-p" ></p>
+    <script>
+        function inputelement() {
+        const type= document.querySelector('.js-input')
+        text=type.value;
+        document.querySelector('.js-p').innerHTML=`${text}`;
+        }
+    </script>
+</body>
+</html>

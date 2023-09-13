@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <p class="js-p" ></p>
+    <p class="js-p1" ></p>
+    <script>
+        const fruits= new Map([
+            ['Apple',700],
+            ['Banana',450],
+            ['Kixi ' ,700],
+        ]);
+        fruits.set('wotermelone',500)
+        console.log(fruits.size)
+        document.querySelector('.js-p').innerHTML=fruits.get('Apple')
+        fruits.delete('Kixi ' );
+        console.log(fruits.get('Kixi'))
+        console.log(fruits.has('Kixi'))//this check the key and give true and false
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //for each in Map
+        let text ='';
+        fruits.forEach(( value , key )=> text += key + '='+value+'<br>')
+        document.querySelector('.js-p1').innerHTML=text 
+        console.log( fruits instanceof Map)
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //entries() methode give a iterator  object with [key,vlaue] in a map   
+        let text1=''
+        for (let x of fruits.entries() ){
+            text1+=x+'<br>';
+        } 
+        console.log(text1)
+        document.querySelector('.js-p1').innerHTML=text1 
+
+
+        const aj={
+            name: 'abhay',
+            name1: 'abhay1',
+            name2: 'abhay2'
+        }
+        let text2=''
+        for( let x in aj){// of not work in objecte
+            text2+=aj[x];
+        }
+        console.log(text2)
+
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json object</title>
+</head>
+<body>
+        <script>const product={
+            name:'socks',
+            age:5,
+            'delevery-time' :5,
+            rating:{//it coled nested object 
+            star:4.5,
+            Count:87,},
+            fun: function function1() {
+            console.log('function inside side the object');}    
+            };
+            console.log(JSON.stringify(product))
+            console.log(typeof JSON.stringify(product))//java script object to json object
+            const json =JSON.stringify(product);
+            console.log(JSON.parse(json));
+            
+
+            
+</script>
+</body>
+</html>

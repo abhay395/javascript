@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="js-p" ></p>
+    <script>
+        console.log(Math.LN2)
+        console.log(Math.LOG2E)
+        console.log(Math.round(4.0))
+        console.log(Math.ceil(4.1))//upper value of integer
+        console.log(Math.floor(4.1))//lower value of integer
+        console.log(Math.trunc(4.2))//value of x means 4
+        console.log(Math.sign(4.2))//it give me this is positive or negative or 0
+        console.log(Math.pow(4,2))//4 ki power 5
+        console.log(Math.sqrt(4))//4 ki power 1/2 yani sqyreroot
+        console.log(Math.abs(-4))//4 ki psitive value
+        console.log(Math.sin(90 * Math.PI / 180));     // returns 1 (the sine of 90 degrees) whene iam want to use this methode firrst i am change degree to radius same thing in cos 
+        console.log(Math.min(45,44,-1));
+        console.log(Math.max(45,44,-1));
+        console.log(Math.random());
+        console.log(Math.log(45));//this is natural log the base of e
+        console.log(Math.log2(45));//this is log the base of 2
+        console.log(Math.log10(10));//this is log the base of 10
+         
+
+        //this will be importante
+        console.log(Math.floor(Math.random()*10))//for 0-9
+        console.log(Math.floor(Math.random()*100))//for0-99
+        console.log(Math.floor(Math.random()*1000))//for0-999
+        // i make a function to take random number min to  max
+        const randomnumber=''
+        function getRandomNumber(min,max){
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+        document.querySelector('.js-p').innerHTML=getRandomNumber(1,10);
+
+
+    </script>
+</body>
+</html>

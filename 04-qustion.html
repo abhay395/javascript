@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raf4</title>
+</head>
+<body>
+    <script>
+        const product1={
+            name:'basketbale',
+            price:55
+        }
+        const product2={
+            name:'basketbale',
+            price:55
+        }
+        function  compareprice(product1,product2){
+            if(product1.price<product2.price){
+                console.log(`product1price is ${product1.price} and product2price is ${product2.price} so product 1 is less expencive of product 2`)
+            }else if (product2.price<product1.price){
+                console.log(`product1price is ${product1.price} and product2price is ${product2.price} so product 2 is less expencive of product 1`)
+             }if (product1.price===product2.price && product1.name===product2.name){
+                 console.log(true);}
+             if (product1.price!==product2.price && product1.name!==product2.name){
+                 console.log( false);
+            }
+        }
+        compareprice(product1,product2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final calculater</title>
+    <link rel="stylesheet" href="style.css/17-qustion.css">
+  </head>
+  <body>
+    <!-- Code changes are at the bottom. -->
+    <p class="value" style="display: inline-block;" ></p>
+    <p class="calculation" style="display: inline-block;" ></p>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+        equal()
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+        equal()
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+        equal()
+      ">3</button>
+
+      <button class="opretion" onclick="
+        updateCalculation(' + ');
+        equal()
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+        equal()
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+        equal()
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+        equal()
+      ">6</button>
+
+      <button class="opretion" onclick="
+        updateCalculation(' - ');
+        equal()
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+        equal()
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+        equal()
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+        equal()
+      ">9</button>
+
+      <button class="opretion" onclick="
+        updateCalculation(' * ');
+        equal()
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+        equal()
+      ">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+        equal()
+      ">.</button>
+
+      <button onclick="
+        calculation = eval(calculation);
+        document.querySelector('.calculation').innerHTML=`=${calculation}`
+        console.log(calculation);
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button class="opretion" onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        // Remember to save the calculation here.
+        document.querySelector('.calculation').innerHTML=`${calculation}`
+        document.querySelector('.value').innerHTML=` ${calculation}`
+        document.querySelector('.value').innerHTML=` ${calculation}`
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+    <script src="script.js/17-qustion.js"></script>
+  </body>
+</html>

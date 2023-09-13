@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        function convertToFahrenheit(Celsius){
+            let ferenhite=(Celsius*9/5)+32;
+           return ferenhite;
+        }
+        console.log(convertToFahrenheit(25))
+        function convertToCelsius(Fahrenheit){
+            let Celsius=(Fahrenheit-32)*5/9;
+            return Celsius;
+        }
+        console.log(convertToCelsius(50))
+        function convertTemperature(degrees,unite) {
+            if(unite==='C'){
+                console.log(convertToFahrenheit(degrees)+'F');
+            }else if (unite==='F'){
+                console.log(convertToCelsius(degrees)+'C');
+            }
+          
+        }
+        
+       convertTemperature(50,'F');
+    </script>
+</body>
+</html>

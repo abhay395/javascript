@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="demo" >
+
+    </p>
+    <script>
+        const Objecte={
+            Name:'Abhay',
+            age:45,
+            cars:[
+                {Name:'BMW',Modal:['45x','950z','850y']},
+                {Name:'Maruti',Modal:['450x','450z','150y']},
+                {Name:'Lambergini',Modal:['415x','985z','000y']}
+            ]
+        }
+        let x='';
+        for (let i in Objecte.cars) {
+            x+= '<h1>'+ Objecte.cars[i].Name+'</h1>';
+            for (let j in Objecte.cars[i].Modal){
+                x+=Objecte.cars[i].Modal[j]+'<br>'
+            }
+        }
+        document.querySelector('.demo').innerHTML=x
+    </script>
+</body>
+</html>

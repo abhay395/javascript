@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+    computerguess('head');
+    ">head</button>
+    <button onclick="
+   computerguess('tail'); 
+    ">tail</button>
+    <button onclick="
+    score.win=0;
+    score.losses=0;
+    localStorage.removeItem('score')
+    "
+    >Remove score</button>
+    <script>
+        const score=JSON.parse(localStorage.getItem('score'))||{
+            win :0,
+            losses:0,
+        };
+
+    function computerguess(guess) {
+        randomNumber=Math.random();
+     if (randomNumber<0.5){
+       const  randommove='head';
+        
+     }else if (randomNumber>0.5){
+        randommove='tail';
+     }
+     if(randommove===guess){
+        result='you win';
+     }else if (randommove!=guess){
+        result='you lose';
+     }
+     if(result==='you win'){
+        score.win++;
+     }else if (result==='you lose'){
+        score.losses++;
+     };
+     localStorage.setItem('score',JSON.stringify(score));
+     alert(`your guess is ${guess} and give it  ${randommove} ${result} 
+     Win:${score.win} Losses: ${score.losses} `) ;
+    }
+    </script>
+</body>
+</html>

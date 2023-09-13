@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Gaming{
+            background-color:#000000;
+            color: white;
+            padding: 5px 10px 5px 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .is-togled{
+            background-color: rgb(199, 196, 196);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="Gaming " onclick="
+    if(classList.contains('is-togled')===false){
+    document.querySelector('.Gaming').classList.add('is-togled')}
+    else{
+        document.querySelector('.Gaming').classList.remove('is-togled')
+    }    
+        " >Gaming</button>
+    <script>
+
+    </script>
+</body>
+</html>

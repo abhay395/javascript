@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refrence</title>
+</head>
+<body>
+    <script>
+        const object1={//object1 only a refrence not a value so i can change a property like message 
+            mesaage:'hello'
+        };
+           object1.mesaage='hire';//its way to change value of property//
+           console.log(object1);
+           const object2=object1;
+           console.log(object2)
+           const object3={
+            mesaage:'hire'
+           };
+           console.log(object3===object1);//it's false because it's a refrences so //
+           console.log(object2===object1);//it's give true because obejct2 a copy of object1//
+
+    </script>
+</body>
+</html>

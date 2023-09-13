@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request</title>
+</head>
+<body>
+    <img src="" alt="" class="sp" >
+    <p class="sn" ></p>
+    <button class="button" >Click ME</button>
+    <script>
+        const button=document.getElementsByClassName('button')
+        const image= document.getElementsByClassName('sp')
+        const requesturl='https://api.github.com/users/hiteshchoudhary'
+       const xhr=new XMLHttpRequest();
+       xhr.open('GET',requesturl)
+    //    xhr.onreadystatechange=function(){
+    //     console.log(xhr.readyState)
+    //    }
+    xhr.onreadystatechange=function(){
+        // console.log(xhr.readyState)
+        if(xhr.readyState===4){
+            const superman=JSON.parse(this.responseText)
+            console.log( typeof superman );
+            console.log(superman.followers) 
+            
+        }
+       }
+       xhr.send()
+       console.log(xhr.readyState)//jano
+    </script>
+</body>
+</html>

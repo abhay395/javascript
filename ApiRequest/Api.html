@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request</title>
+</head>
+<body>
+    <img src="" alt="" class="sp" >
+    <p class="sn" ></p><span class="followers" ></span><br>
+    <button class="buttons" >Click ME</button>
+    <script>
+        const button1=document.querySelector('.buttons')
+        const name=document.querySelector('.sn')
+        const image= document.querySelector('.sp');
+        const followers= document.querySelector('.followers');
+        const requesturl='https://api.github.com/users/hiteshchoudhary'
+       const xhr=new XMLHttpRequest();
+       xhr.open('GET',requesturl)
+    //    xhr.onreadystatechange=function(){
+    //     console.log(xhr.readyState)
+    //    }
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState===4){
+            const superman=JSON.parse(this.responseText)
+            console.log(superman);
+            console.log(superman.followers) 
+            button1.addEventListener('click',function(){
+                image.src=superman.avatar_url
+                name.innerHTML=superman.login
+                followers.innerHTML=`twiter folowers:${superman.followers}`
+
+            })
+            
+        }
+       }
+       xhr.send()
+       console.log(xhr.readyState)//jano
+    </script>
+</body>
+</html>

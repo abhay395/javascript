@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+</head>
+<body>
+    <p class="js-p" ></p>
+    <p class="js-p1" ></p>
+    <script>
+        const a= ['abhay', 'ajay', 'kanak',"golu"]
+        const b=new Set(a)
+        console.log( b instanceof Set)
+        b.add('abhay1')
+        console.log(b);
+        b.delete('ajay')
+        console.log(b);
+        // b.clear();
+        console.log(b);
+        const c= b.has('abhay');
+        console.log(c)
+        let text='';
+        b.forEach((value)=>text+=value+'<br>');
+        document.querySelector('.js-p').innerHTML=text
+
+        // it using by for loop  
+        text1=''
+        for (const x of b){
+            text1+=x+'<br>';
+        }
+        document.querySelector('.js-p1').innerHTML=text1
+        const  d=b.keys() // it give me objecte set itrator 
+        console.log(d)
+    </script>
+</body>
+</html>

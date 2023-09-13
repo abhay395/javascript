@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        let mydate =new Date();
+        switch (mydate.getDay()){
+            case 0: text='sunday'
+            break;
+            case 1: text='monday'
+            break;
+            case 2: text='tuseday'
+            break;
+            case 3: text='wensday'
+            break;
+            case 4: text='thusday'
+            break;
+            case 5: text='friday'
+            break;
+            case 6: text='satrday'
+            break;
+            default: text='dis is not a day'
+
+        }
+        console.log(text)
+        switch (mydate.getDay()){
+            case 0: 
+            case 1: text1='it is weekend'
+                break 
+            case 4:
+            case 5: text1='soon it is weekend'
+            default: text1='this is not a day'
+
+        }
+        console.log(text1)
+        let x = "0";
+        switch (x) {
+        case 0:
+            text2 = "Off";
+            break;
+        case 1:
+            text2 = "On";
+            break;
+        default:
+            text2 = "No value found";
+        }        
+        console.log(text2);//because x value type and case value type is diffrente whene it same it give the value
+
+    </script>
+</body>
+</html>

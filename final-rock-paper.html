@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final-rock paper storage</title>
+    <link rel="stylesheet" href="style.css/final-rock.csss">
+</head>
+<body>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-button" onclick=" playgame('Rock');"><img class="move-icon" src="image/Rock-emoji.png" alt=""></button>
+    <button class="move-button" onclick=" playgame('Paper');"><img class="move-icon" src="image/Paper-emoji.png" alt=""></button>
+    <button class="move-button" onclick=" playgame('Scissors');"><img class="move-icon" src="image/scissors-emoji.png" alt=""></button>
+    <p class="js-result result" ></p>
+    <p class="js-move move"></p>
+    <p class="js-score score" ></p>
+    <button class="reset-score-button" onclick="
+    score.win=0;
+    score.losses=0;
+    score.tie=0;
+    localStorage.removeItem('score');
+    updatescore();
+    ">Reset score</button>
+       <script src="script.js/final-rock-paper.js"></script>
+</body>
+</html>

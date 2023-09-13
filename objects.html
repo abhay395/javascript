@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        const product={
+            name:'socks',
+            age:5,
+            'delevery-time' :5,
+            rating:{//it coled nested object 
+                star:4.5,
+                Count:87,},
+                fun: function function1() {
+                    console.log('function inside side the object');
+                }
+            
+
+        };
+        console.log(product);
+        console.log(product.name);//dot notesoin
+        product.name='cotton socks';
+        console.log(product.name);
+        product.abhay='aj';
+        console.log(product.abhay);
+        delete product.abhay;
+        console.log(product);   
+        console.log(typeof product);
+        console.log(product['name']);//breaket notetion
+        console.log(product['delevery-time']);
+        console.log(product.rating.star);
+        product.fun(); 
+        
+    </script>
+</body>
+</html>

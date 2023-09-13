@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean</title>
+</head>
+<body>
+    <p>Pleasse Type Your age  in </p>
+    <input placeholder="age" class="js-age" >
+    <button onclick=" myfunction() " >click</button>
+    <p class="js-result" ></p>
+    <script>
+    //  console.log(Boolean(0))//0 is false
+    //  console.log(Boolean(''))// empty is false
+    //  var x;
+    //  console.log(Boolean(x))// undifinde  is false
+    //  var y=null
+    //  console.log(Boolean(y))// null  is false
+    //  var z='helllo'/5
+    //  console.log(Boolean(z))// NaN is false
+    function myfunction(){
+        let age= document.querySelector('.js-age').value;
+        let result= (age>=18)?'Yor age inough for vote':'You are too young';
+        document.querySelector('.js-result').innerHTML=result;
+    }
+
+
+    </script>
+</body>
+</html>

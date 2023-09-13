@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evente</title>
+    <style>
+        img{
+            height: 100px;
+            width: 170px;
+        }
+        body{
+            background-color: #414141;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <ul id="images">
+        <li><img src="istockphoto-1426559579-1024x1024.jpg" id="woman" alt="photoshop"></li>
+        <li><img id="car" src="istockphoto-166272807-1024x1024.jpg"></li>
+        <li><img src="istockphoto-516449022-1024x1024.jpg" id="boat"></li>
+        <li><img src="istockphoto-525670203-1024x1024.jpg" id="snow"></li>
+        <li><a href="https://www.google.co.in/" style="color: white;" id="google" >google </a></li>
+    </ul>
+    <script>
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e)
+            console.log(e.target.parentNode);
+            console.log(e.target.tagName);
+            if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeit= e.target.parentNode
+            removeit.remove()
+            }
+            //removeit.parentNode.removeChild(removeit) 2nd methode
+        },false)
+    </script>
+</body>
+</html>

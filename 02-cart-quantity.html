@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Cart Quantity</h2> -->
+    <button onclick="console.log(`Cart Quantity:(${cartQuantity})`);">Show Quantity</button>
+    <button onclick="
+    cartQuantity=1+cartQuantity
+    console.log(`Cart Quantity:(${cartQuantity})`);
+    cartfull();
+    " >Add to Cart</button>
+    <button onclick="
+    ubdatecartquantity(2);
+
+    " >+2</button>
+    <button onclick="
+    ubdatecartquantity(3);
+    " >+3</button>
+    <button onclick="
+     ubdatecartquantity(-2);
+    " >-2</button>
+    <button onclick="
+     ubdatecartquantity(-3);
+    ">-3</button>
+    <button onclick=" ubdatecartquantity(-1);
+    ">Remove</button>
+    
+    <button onclick="
+    cartQuantity=cartQuantity-cartQuantity
+    console.log(`Cart was rest`);
+    console.log(`Cart Quantity:(${cartQuantity})`);
+    " >Reset Cart</button>
+    <script>
+        let cartQuantity = 0;
+        function ubdatecartquantity(amount){
+            cartQuantity=cartQuantity+amount
+            if (cartQuantity>10){
+                alert('cart is full');
+                cartQuantity=10;
+            }else if (cartQuantity<0){
+                alert('not enough item')
+                cartQuantity=0;
+            }
+
+          console.log(`Cart Quantity:(${cartQuantity})`)
+        }
+
+    </script>
+</body>
+</html>

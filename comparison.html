@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="js-p"  ></p>
+    <script>
+        let name=null;
+        let text='abhay';
+        let name1=name??text;//The Nullish Coalescing Operator (??) it give second value whene first value is null 
+        document.querySelector('.js-p').innerHTML=`Your name is ${name1}`
+        //==============================================================
+        //The Optional Chaining Operator (?.) is give me undifinde when one objecet is undifinde
+    </script>
+</body>
+</html>

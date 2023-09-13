@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object shorthand</title>
+</head>
+<body>
+    <script>
+          const object4={
+            mesaage:'Good job!',
+            price:555
+        };
+        //const mesaage=object4.mesaage;//this way to outside a property in object//
+        const{mesaage,price}=object4;//this is shorthand to outside a property in a object it's colled destructuring//
+        console.log(mesaage);
+        console.log(price);
+        object5={
+            //mesaage:mesaage//this is a way to take value in object property
+            mesaage//and this is a shorthand of uper thing
+        };
+        console.log(object5)
+        const object6={
+            mesaage:'Good job!',
+            // method:function function1(){
+            //     console.log('abhay');
+            // }
+            method(){//this is shorthend of make function in object
+                console.log('abhay')
+            }
+
+        }
+        object6.method();
+
+    </script>
+</body>
+</html>

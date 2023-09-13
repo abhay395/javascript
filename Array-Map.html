@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="js-p" ></p>
+    <p class="js-l" ></p>
+    <p class="js-f" ></p>
+    <p class="js-k" ></p>
+    <p class="js-k1" ></p>
+    <p class="js-M" ></p>
+    <p class="js-M1" ></p>
+
+    <script>
+        const myArr=[45,41,47,88,99,65,23];//map look like this methode
+        const myArr1=myArr.reduce((totoal,value)=> totoal+value)
+        console.log(myArr1);// one more thing in reduce is reduceright
+        document.querySelector('.js-p').innerHTML=myArr1
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        const myList=[45,44,13,55];
+        const myList1=myList.some((value,index,array)=> value>18)
+        document.querySelector('.js-l').innerHTML=myList1//this check some of Array value
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        const myList2=['abhay','ajay','kanak','abhay']
+        const myList3=myList2.indexOf('abhay',2)
+        document.querySelector('.js-f').innerHTML=myList3
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        const Number1=[4,85,45,12,25];
+        const number = Number1.find((value)=> value>18)
+        document.querySelector('.js-k').innerHTML=number;
+        const number1 = Number1.findIndex((value)=> value>18)//it give me index of elemente 
+        document.querySelector('.js-k1').innerHTML=number1;
+
+        //Array Keys and entries
+        const fruits=['banana', 'orange','Apple','Mango'];
+        const keay =fruits.keys();
+        let text='';
+        console.log(keay)
+        for ( let x of keay){
+            text+=x+'<br>';
+        }
+        document.querySelector('.js-M').innerHTML=text;
+        text1='';
+        const entri=fruits.entries();//this give me key/value pair in 
+        for(let x of entri){
+            text1+=x+'<br>'
+        }
+        document.querySelector('.js-M1').innerHTML=text1
+        console.log(text1)
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //include in array
+        const friend=['Golu','kuldeep','Sahil','Aush','Golu']
+        const include=friend.includes();
+        console.log(include);
+        // const ajay=fruits.join()
+        // document.querySelector('.js-M1').innerHTML=ajay
+
+    </script>
+</body>
+</html>

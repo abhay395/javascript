@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>Cart Quantity</h2> -->
+    <button onclick="console.log(`Cart Quantity:(${cartQuantity})`);">Show Quantity</button>
+    <button onclick="
+    ubdatecartquantity(1);
+    " >Add to Cart</button>
+    <button onclick="
+    ubdatecartquantity(2);
+    " >+2</button>
+    <button onclick="
+    ubdatecartquantity(3);
+    " >+3</button>
+    <button onclick="
+    ubdatecartquantity(4);
+    " >+4</button>
+    <button onclick="
+    ubdatecartquantity(5);
+    " >+5</button>
+    <button onclick=" ubdatecartquantity(-1);
+    ">Remove from cart </button>
+    <button onclick="
+    ubdatecartquantity(-2);
+   " >-2</button>
+   <button onclick="
+    ubdatecartquantity(-3);
+   ">-3</button>
+    
+    <button onclick="
+    ubdatecartquantity(-cartQuantity);
+    " >Reset Cart</button>
+    <p class="Cq" ></p>
+    <script>
+        let cartQuantity = 0;
+        function ubdatecartquantity(amount){
+            cartQuantity=cartQuantity+amount
+            if (cartQuantity>10){
+                alert('cart is full');
+                cartQuantity=10;
+            }else if (cartQuantity<0){
+                alert('not enough item')
+                cartQuantity=0;
+            }
+            document.querySelector('.Cq').innerHTML=`Cart Quantity:${(cartQuantity)}`
+        }
+    
+
+    </script>
+</body>
+</html>
