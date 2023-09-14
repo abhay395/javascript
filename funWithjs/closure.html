@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloueser</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    <script>
+    //  function makeFinc(){
+    //     const name='Modzila'
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    // return displayName
+    //  }   
+    //  const myfn=makeFinc()
+    //  myfn()
+    </script>
+
+    <script>
+        document.getElementById('orange').onclick=cn("orange")
+        document.getElementById('green').onclick=cn("green")
+        function cn(color){
+            function chnager(){
+            document.body.style.backgroundColor=`${color}`
+            }
+            return chnager
+        }
+    </script>
+</body>
+</html>
